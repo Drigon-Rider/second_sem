@@ -1,0 +1,4 @@
+lxi h,0010h
+push h
+pop psw 
+hlt

@@ -1,0 +1,13 @@
+MVI A,30H
+MOV B, A           
+ANI 40H            
+JNZ L1
+MOV A,B    
+ANI 08H       
+JZ L2
+MOV A,B    
+JMP DISPLAY 
+L1: HLT
+L2: HLT    
+DISPLAY: OUT 0AH    
+HLT  

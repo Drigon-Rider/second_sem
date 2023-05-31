@@ -1,0 +1,8 @@
+
+;<Program title>
+
+MVI A,32H
+MVI B,0F0H
+ANA B
+
+hlt

@@ -1,0 +1,6 @@
+LDA 8020H  
+CPI 7FH         
+JP L1            
+HLT              
+L1: STA 8030h
+HLT 

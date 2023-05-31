@@ -1,0 +1,27 @@
+;5.A table contains ten 8-bit numbers from memory location
+
+;9500h: Write
+
+;a program to arrange in descending order.
+
+MVI D, 0AH
+L2: MVI E, 0AH
+MVI B, 00H
+LXI H, 9500H
+L1: MOV A, M
+INX H
+MOV B, M
+CMP B
+CC SWITCHNUM
+;ACENDING ORDER => "CNC" |
+;DECENDEING ORDER => "CC"
+DCR E
+JNZ L1
+DCR D
+JNZ L2
+HLT
+SWITCHNUM: MOV M, A
+DCX H
+MOV M, B
+INX H
+RET

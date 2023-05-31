@@ -1,0 +1,10 @@
+MVI A, 0feh     
+LXI H, 0h              
+Mvi b,08h
+             
+BACK: RAR           
+JNC SKIP              
+INX H                
+SKIP: DCR B         
+JNZ BACK
+hlt 
